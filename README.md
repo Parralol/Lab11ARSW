@@ -1,4 +1,4 @@
-# Lab11ARSW
+# Lab-11 ARSW
 
 This programm allow multiple users to draw in a board using realtime securely and using REDIS
 2024/07/09
