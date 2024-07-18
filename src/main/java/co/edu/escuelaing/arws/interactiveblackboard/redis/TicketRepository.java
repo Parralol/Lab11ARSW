@@ -8,7 +8,9 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
+@SuppressWarnings("unused")
 public class TicketRepository {
+    
     
     @Autowired
     private StringRedisTemplate template;
@@ -18,9 +20,6 @@ public class TicketRepository {
     private ListOperations<String, String> listTickets;
 
     private int ticketnumber;
-
-    public TicketRepository() {
-    }
 
 
     public synchronized Integer getTicket() {
