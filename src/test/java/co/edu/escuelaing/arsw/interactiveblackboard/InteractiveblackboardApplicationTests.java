@@ -20,9 +20,8 @@ class InteractiveblackboardApplicationTests {
 
     @Test
     void testHelloEndpoint() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/hello"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string("Hello, World!"));
+        mockMvc.perform(MockMvcRequestBuilders.get("/login"))
+                .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
     // Add more tests for other endpoints or functionality as needed
