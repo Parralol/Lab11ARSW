@@ -24,6 +24,10 @@ public class TicketRepository {
 
     private int ticketnumber;
 
+    @Autowired
+    public TicketRepository(StringRedisTemplate template){
+        this.template = template;
+    }
 
     public synchronized Integer getTicket() {
         Integer a = ticketnumber++;

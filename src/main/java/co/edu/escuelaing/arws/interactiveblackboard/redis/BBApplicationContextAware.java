@@ -12,20 +12,19 @@ import co.edu.escuelaing.arws.interactiveblackboard.annotations.GeneratedExclude
 @Component
 @Lazy(false)
 public class BBApplicationContextAware implements ApplicationContextAware {
-
-
-    private static ApplicationContext context;
+    
+    private  ApplicationContext context;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         context = applicationContext;
     }
 
-    public static ApplicationContext getApplicationContext() {
+    public  ApplicationContext getApplicationContext() {
         return context;
     }
 
-    public static <T> T getBean(Class<T> beanClass) {
+    public <T> T getBean(Class<T> beanClass) {
         return context.getBean(beanClass);
     }
 }

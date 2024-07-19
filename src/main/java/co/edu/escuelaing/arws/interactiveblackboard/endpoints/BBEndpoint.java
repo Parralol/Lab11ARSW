@@ -32,10 +32,10 @@ public class BBEndpoint {
 
     Session ownSession = null;
     private boolean accepted = false;
-
-    @Autowired
     private TicketRepository ticketRepo;
 
+
+    @Autowired
     public BBEndpoint(TicketRepository ticketRepo){
         this.ticketRepo = ticketRepo;
     }
@@ -59,11 +59,9 @@ public class BBEndpoint {
             this.send(message);
         } else {
             if (!accepted && ticketRepo.checkTicket(message)) {
-                System.out.println("pto valido");
                 accepted = true;
             } else {
                 try {
-                    System.out.println("pto NO valido");
                     ownSession.close();
                 } catch (IOException ex) {
                     logger.log(Level.SEVERE, null, ex);
@@ -76,7 +74,7 @@ public class BBEndpoint {
     public void openConnection(Session session) {
         queue.add(session);
         ownSession = session;
-        logger.log(Level.INFO, "Connection opened.");
+        logger.log(Level.INFO, () -> "Connection opened.");
         try {
             session.getBasicRemote().sendText("Connection established.");
         } catch (IOException ex) {
@@ -87,13 +85,13 @@ public class BBEndpoint {
     @OnClose
     public void closedConnection(Session session) {
         queue.remove(session);
-        logger.log(Level.INFO, "Connection closed for session " + session);
+        logger.log(Level.INFO, () -> "Connection closed for session " + session);
     }
 
     @OnError
     public void error(Session session, Throwable t) {
         queue.remove(session);
-        logger.log(Level.INFO, t.toString());
-        logger.log(Level.INFO, "Connection error.");
+        logger.log(Level.INFO, () -> t.toString());
+        logger.log(Level.INFO, () -> "Connection error.");
     }
 }

@@ -31,7 +31,7 @@ class EjemploControllerTest {
     private EjemploController ejemploController;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         registry = mock(ViewControllerRegistry.class);
         ejemploController = new EjemploController();
     }

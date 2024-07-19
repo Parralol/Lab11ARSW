@@ -7,10 +7,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("users")
 public class User implements Serializable{
+    
     @Id
-    public String name;
+    private String name;
 
-    public String pass;
+    private String pass;
 
     public User() {
     }

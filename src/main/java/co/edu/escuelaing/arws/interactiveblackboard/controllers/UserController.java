@@ -1,6 +1,7 @@
 package co.edu.escuelaing.arws.interactiveblackboard.controllers;
 
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +42,7 @@ public class UserController {
         User user = new User(usern, encodedPassword);
 
         createUser(user);
-       logger.info("Successfully created" + usern + " USER WITH " + encodedPassword + "PASSWORD");
+       logger.log(Level.INFO, () ->"Successfully created " + usern + " USER WITH " + encodedPassword + " PASSWORD");
 
         return "home";
     }

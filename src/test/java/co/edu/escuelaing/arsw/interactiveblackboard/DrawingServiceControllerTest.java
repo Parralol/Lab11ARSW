@@ -25,12 +25,12 @@ public class DrawingServiceControllerTest {
     private DrawingServiceController drawingServiceController;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void testLoadUserByUsername_Success() {
+    void testLoadUserByUsername_Success() {
         // Arrange
         User user = new User("username", "password");
         when(userService.findByName("username")).thenReturn(user);
@@ -45,7 +45,7 @@ public class DrawingServiceControllerTest {
     }
 
     @Test
-    public void testLoadUserByUsername_UserNotFound() {
+    void testLoadUserByUsername_UserNotFound() {
         // Arrange
         when(userService.findByName("nonexistent")).thenReturn(null);
 

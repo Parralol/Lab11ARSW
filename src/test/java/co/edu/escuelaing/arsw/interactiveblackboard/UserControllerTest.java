@@ -36,7 +36,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void testCreateUser() {
+    void testCreateUser() {
         // Arrange
         User user = new User("username", "encodedPassword");
         when(userService.save(user)).thenReturn(user);
@@ -52,7 +52,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void testGetAllUsers() {
+    void testGetAllUsers() {
         // Arrange
         User user1 = new User("user1", "password1");
         User user2 = new User("user2", "password2");
@@ -71,7 +71,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void testCreates() {
+    void testCreates() {
         // Arrange
         String username = "newUser";
         String password = "password";
