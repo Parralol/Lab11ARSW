@@ -16,7 +16,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class DrawingServiceControllerTest {
+class DrawingServiceControllerTest {
 
     @Mock
     private UserService userService;

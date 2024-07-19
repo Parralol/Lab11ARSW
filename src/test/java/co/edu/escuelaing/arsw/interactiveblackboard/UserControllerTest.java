@@ -19,7 +19,7 @@ import co.edu.escuelaing.arws.interactiveblackboard.service.UserService;
 import java.util.Arrays;
 import java.util.List;
 
-public class UserControllerTest {
+class UserControllerTest {
 
     @Mock
     private UserService userService;

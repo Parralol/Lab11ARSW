@@ -1,7 +1,5 @@
 package co.edu.escuelaing.arsw.interactiveblackboard;
 
-import static org.mockito.Mockito.*;
-
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 
@@ -14,7 +12,7 @@ import org.springframework.boot.web.servlet.ServletContextInitializer;
 
 import co.edu.escuelaing.arws.interactiveblackboard.InteractiveblackboardApplication;
 
-public class InteractiveblackboardApplicationTest {
+class InteractiveblackboardApplicationTest {
 
     @Mock
     private ServletContext servletContext;

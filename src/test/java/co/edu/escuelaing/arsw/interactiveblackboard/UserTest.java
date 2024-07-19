@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import co.edu.escuelaing.arws.interactiveblackboard.entity.User;
 
-public class UserTest {
+class UserTest {
 
     @Test
     void testDefaultConstructor() {
