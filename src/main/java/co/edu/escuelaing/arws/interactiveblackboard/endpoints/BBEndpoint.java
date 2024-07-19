@@ -36,6 +36,9 @@ public class BBEndpoint {
     @Autowired
     private TicketRepository ticketRepo;
 
+    public BBEndpoint(TicketRepository ticketRepo){
+        this.ticketRepo = ticketRepo;
+    }
     public void send(String msg) {
         try {
             for (Session session : queue) {
@@ -51,7 +54,7 @@ public class BBEndpoint {
 
     @OnMessage
     public void processPoint(String message, Session session) {
-        logger.log(Level.INFO, "Ticket/Point: " + message + ".Session: " + session);
+        logger.log(Level.INFO, () ->"Ticket/Point: " + message + ".Session: " + session);
         if (accepted) {
             this.send(message);
         } else {

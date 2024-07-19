@@ -1,6 +1,7 @@
 package co.edu.escuelaing.arws.interactiveblackboard.controllers;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +17,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class UserController {
 
     private final UserService userService;
-
+    Logger logger = Logger.getLogger(getClass().getName());
+    
     PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     @Autowired
@@ -39,7 +41,7 @@ public class UserController {
         User user = new User(usern, encodedPassword);
 
         createUser(user);
-        System.out.println("Successfully created" + usern + " USER WITH " + encodedPassword + "PASSWORD");
+       logger.info("Successfully created" + usern + " USER WITH " + encodedPassword + "PASSWORD");
 
         return "home";
     }

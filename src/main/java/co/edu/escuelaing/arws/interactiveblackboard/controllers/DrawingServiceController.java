@@ -18,9 +18,14 @@ import co.edu.escuelaing.arws.interactiveblackboard.service.UserService;
 @Service
 public class DrawingServiceController implements UserDetailsService {
 
-    @Autowired
+    
     private UserService userRepository;
 
+    @Autowired
+    public DrawingServiceController(UserService userRepository){
+        this.userRepository=userRepository;
+    }
+    
     @Override
     public UserDetails loadUserByUsername(String username) {
         User user = userRepository.findByName(username);

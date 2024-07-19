@@ -5,8 +5,6 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import co.edu.escuelaing.arws.interactiveblackboard.annotations.GeneratedExcludeFromCodeCoverage;
 import jakarta.servlet.ServletContext;
-import jakarta.websocket.HandshakeResponse;
-import jakarta.websocket.server.HandshakeRequest;
 import jakarta.websocket.server.ServerEndpointConfig;
 
 @GeneratedExcludeFromCodeCoverage
@@ -23,8 +21,4 @@ public class SpringConfigurator extends ServerEndpointConfig.Configurator {
         return context.getAutowireCapableBeanFactory().createBean(endpointClass);
     }
 
-    @Override
-    public void modifyHandshake(ServerEndpointConfig sec, HandshakeRequest request, HandshakeResponse response) {
-        super.modifyHandshake(sec, request, response);
-    }
 }

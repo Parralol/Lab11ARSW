@@ -9,8 +9,12 @@ import co.edu.escuelaing.arws.interactiveblackboard.redis.TicketRepository;
 @RestController
 public class RestfuController {
 
-    @Autowired
     TicketRepository ticketRepo;
+
+    @Autowired
+    public RestfuController(TicketRepository ticketRepo){
+        this.ticketRepo=ticketRepo;
+    }
 
     @GetMapping("/getticket")
     public String getTicket() {
