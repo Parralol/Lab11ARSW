@@ -4,8 +4,10 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE, ElementType.METHOD })
-public @interface ExcludeFromCodeCoverage {
+public @interface GeneratedExcludeFromCodeCoverage {
 }

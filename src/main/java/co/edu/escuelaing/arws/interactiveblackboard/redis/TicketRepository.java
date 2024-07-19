@@ -7,6 +7,9 @@ import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
+import co.edu.escuelaing.arws.interactiveblackboard.annotations.GeneratedExcludeFromCodeCoverage;
+
+@GeneratedExcludeFromCodeCoverage
 @Component
 @SuppressWarnings("unused")
 public class TicketRepository {

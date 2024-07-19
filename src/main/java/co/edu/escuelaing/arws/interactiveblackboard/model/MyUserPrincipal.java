@@ -6,8 +6,10 @@ import java.util.Set;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import co.edu.escuelaing.arws.interactiveblackboard.annotations.GeneratedExcludeFromCodeCoverage;
 import co.edu.escuelaing.arws.interactiveblackboard.entity.User;
 
+@GeneratedExcludeFromCodeCoverage
 public class MyUserPrincipal implements UserDetails {
     private User user;
 	private final Set<GrantedAuthority> authorities;

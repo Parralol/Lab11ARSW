@@ -14,12 +14,14 @@ import jakarta.websocket.OnMessage;
 import jakarta.websocket.OnOpen;
 import jakarta.websocket.Session;
 import jakarta.websocket.server.ServerEndpoint;
+import co.edu.escuelaing.arws.interactiveblackboard.annotations.GeneratedExcludeFromCodeCoverage;
 import co.edu.escuelaing.arws.interactiveblackboard.configurator.SpringConfigurator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
 import co.edu.escuelaing.arws.interactiveblackboard.redis.TicketRepository;
 
+@GeneratedExcludeFromCodeCoverage
 @Component
 @ServerEndpoint(value = "/bbService", configurator = SpringConfigurator.class)
 @Configurable(preConstruction = true)

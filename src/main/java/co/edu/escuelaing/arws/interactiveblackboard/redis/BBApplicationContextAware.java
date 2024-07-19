@@ -6,6 +6,9 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
+import co.edu.escuelaing.arws.interactiveblackboard.annotations.GeneratedExcludeFromCodeCoverage;
+
+@GeneratedExcludeFromCodeCoverage
 @Component
 @Lazy(false)
 public class BBApplicationContextAware implements ApplicationContextAware {

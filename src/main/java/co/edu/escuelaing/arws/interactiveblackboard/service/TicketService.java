@@ -3,9 +3,11 @@ package co.edu.escuelaing.arws.interactiveblackboard.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import co.edu.escuelaing.arws.interactiveblackboard.annotations.GeneratedExcludeFromCodeCoverage;
 import co.edu.escuelaing.arws.interactiveblackboard.redis.TicketRepository;
 
 @Service
+@GeneratedExcludeFromCodeCoverage
 public class TicketService {
 
     private final TicketRepository ticketRepository;

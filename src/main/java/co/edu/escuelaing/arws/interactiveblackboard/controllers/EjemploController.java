@@ -5,14 +5,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import co.edu.escuelaing.arws.interactiveblackboard.annotations.ExcludeFromCodeCoverage;
+import co.edu.escuelaing.arws.interactiveblackboard.annotations.GeneratedExcludeFromCodeCoverage;
 
 @Configuration
 public class EjemploController implements WebMvcConfigurer {
 
 
 	@Override
-	@ExcludeFromCodeCoverage
+	@GeneratedExcludeFromCodeCoverage
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/home").setViewName("home");
 		registry.addViewController("/").setViewName("home");

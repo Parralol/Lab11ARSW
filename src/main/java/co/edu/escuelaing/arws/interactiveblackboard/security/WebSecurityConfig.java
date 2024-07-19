@@ -7,7 +7,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import co.edu.escuelaing.arws.interactiveblackboard.annotations.GeneratedExcludeFromCodeCoverage;
 
+@GeneratedExcludeFromCodeCoverage
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
@@ -33,19 +35,4 @@ public class WebSecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-/** 
-	@SuppressWarnings("deprecation")
-	@Bean
-	public static UserDetailsService userDetailsService() {
-		UserDetails user =
-			 User.withDefaultPasswordEncoder()
-				.username("user")
-				.password("password")
-				.roles("USER")
-				.build();
-
-		return new InMemoryUserDetailsManager(user);
-	}
-
-*/
 }

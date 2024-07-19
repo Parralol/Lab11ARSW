@@ -43,6 +43,14 @@
 		<groupId>org.aspectj</groupId>
 		<artifactId>aspectjweaver</artifactId>
 	</dependency>
+	<dependency>
+		<groupId>net.bytebuddy</groupId>
+		<artifactId>byte-buddy-agent</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>net.bytebuddy</groupId>
+		<artifactId>byte-buddy</artifactId>
+	</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -71,10 +79,6 @@
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.5.6</version>
@@ -83,7 +87,6 @@
 		<groupId>org.apache.httpcomponents.client5</groupId>
 		<artifactId>httpclient5</artifactId>
 	</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -141,7 +144,7 @@
                         </goals>
                         <configuration>
                             <excludes>
-                                <exclude>**/configurators/**</exclude>
+                                <exclude>co/edu/escuelaing/arws/interactiveblackboard/controllers/EjemploController.addViewControllers(ViewControllerRegistry)</exclude>
                          </excludes>
                         </configuration>
                     </execution>
@@ -172,7 +175,23 @@
 			<artifactId>sonar-maven-plugin</artifactId>
 			<version>4.0.0.4121</version>
 		</plugin>
-
+		<plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.0.0</version>
+            <executions>
+                <execution>
+                    <id>filter-bytecode</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>java</goal>
+                    </goals>
+                    <configuration>
+                        <mainClass>co.edu.escuelaing.arws.interactiveblackboard.filter.MethodFilter</mainClass>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
 		</plugins>
 	</build>
 
