@@ -1,6 +1,6 @@
 # Lab-11 ARSW
 
-This programm allow multiple users to draw in a board using realtime securely and using REDIS
+this laboratory is all about TDD, jacoco and sonar integrations
 2024/07/09
 
 
@@ -45,10 +45,24 @@ First clone this proyect into your own system, then
 mvn clean package
 ```
 
-### Acceptance test
+### TESTS 
 
-https://github.com/user-attachments/assets/d642b262-7e48-449e-9f46-3e13bd1807ef
+*ALL PASSING TESTS*
 
+![image](https://github.com/user-attachments/assets/f0ba2bbb-08c7-4aa2-a662-2b20bc989459)
+
+*JACOCO REPORT*
+
+![image](https://github.com/user-attachments/assets/68d022bf-eaf3-49e4-8a31-b64e7cc5dc20)
+
+
+*SONARCLOUD TEST REPORT*
+
+![image](https://github.com/user-attachments/assets/033445ae-9d32-4854-925f-e3e7747f8db9)
+
+![image](https://github.com/user-attachments/assets/8108f67d-2340-4d39-84f3-e6ae22404150)
+
+![image](https://github.com/user-attachments/assets/c7014469-df80-4d7d-9405-492872f450fb)
 
 ## Generating javadoc
 
